@@ -45,7 +45,7 @@ class UserController extends Controller
     {
         $input = $request->all();
         $result = $this->userInterface->checkUser($input);
-        return response()->json($result, $result['status']);
+        return response()->json($result);
     }
 
     /**
@@ -80,6 +80,6 @@ class UserController extends Controller
     {
         $input = $request->all();
         $result = $this->userInterface->createUser($input);
-        return response()->json($result, $result['status']);
+        return response()->json($result);
     }
 }

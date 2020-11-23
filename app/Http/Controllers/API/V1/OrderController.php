@@ -43,7 +43,8 @@ class OrderController extends Controller
      */
     public function store(OrderRequest $request)
     {
-        $result = $this->orderInterface->create($request->all());
+        $input = $request->all();
+        $result = $this->orderInterface->create($input);
         return response()->json($result);
     }
 }
